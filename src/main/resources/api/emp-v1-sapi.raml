@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: emp-v1-sapi
+
+baseUri: http://localhost:8081/v1
+/emps:
+  get:
+    queryParameters:
+      empId:
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "status": 200,
+                "message": "success"
+              }
